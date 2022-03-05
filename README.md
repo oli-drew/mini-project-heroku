@@ -24,7 +24,7 @@ In this mini-project, you will work with a group to add routes to an existing ap
 
 - It's done when I have tested my `/api/diagnostics` endpoint using Insomnia.
 
-- It's done when I have tested the wildcard route by visiting any non-existent path, like `http://localhost/test`.
+- It's done when I have tested the wildcard route by visiting any non-existent path, like `http://localhost/test`. /
 
 - It's done when I have deployed the finished application to Heroku. /
 
