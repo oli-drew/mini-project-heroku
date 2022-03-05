@@ -1,44 +1,46 @@
-# 📖 Deploy an Express.js App to Heroku
+# 🏗️ Unit 11 Mini-Project: Add Routes to Existing Application
 
-Work with a partner to implement the following user story:
+In this mini-project, you will work with a group to add routes to an existing application. You will create one wildcard route for serving up a 404 page, as well as a diagnostics route for logging failed form validation.
 
-* As a web developer, I want to deploy my application to services like Heroku so that I can share my app with the world.
+* As a developer, I want to be able to add routes to an existing application.
+
+* As a developer, I want to serve up a custom 404 page when the requested resource doesn't exist.
+
+* As a developer, I want to log usage statistics from users of my site.
+
+* As a developer, I want to be able to deploy my apps to Heroku.
 
 ## Acceptance Criteria
 
-* It's done when I have initialized a Git repository by running `git init` at the root of my existing project.
+* It's done when I have created a wildcard route in `server.js` that will send the users to a 404 page.
 
-* It's done when I have modified the `PORT` variable in `server.js` according to the Heroku documentation.
+* It's done when I have created a custom `404.html` page for my wildcard route to serve. 
 
-* It's done when I have created a new Heroku app using the Heroku CLI.
+* It's done when I have created a POST route for `/api/diagnostics` that will store information about the invalid form submissions.
 
-* It's done when I have verified that the Heroku remote URL was added using the appropriate Git command.
+* It's done when I have created a GET route for `/api/diagnostics` that will return the content of `db/diagnostics/json`.
 
-* It's done when I have added and committed all my files and pushed to Heroku.
+* It's done when I have created a `fetch()` request on the front end that will send a POST request to `/api/diagnostics` every time a user attempts to submit an invalid form.
 
-* It's done after I have confirmed that the application was deployed successfully by running `heroku open`.
+* It's done when I have tested my `/api/diagnostics` endpoint using Insomnia.
 
-## 📝 Notes
+* It's done when I have tested the wildcard route by visiting any non-existent path, like `http://localhost/test`.
 
-Refer to the [Full-Stack Blog on installing the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
-
-Refer to the documentation:
-
-[Heroku documentation on getting started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
-
-[Heroku documentation on creating a Heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote)
+* It's done when I have deployed the finished application to Heroku.
 
 ---
 
 ## 💡 Hints
 
-How can you use the command `heroku logs --tail` to troubleshoot deployment errors?
+How can we declare a wildcard route in Express.js?
+
+How will `fs.writeFile()` help us log usage stats?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* When you created your Heroku account, you might have seen the [Heroku dashboard](https://dashboard.heroku.com/). What useful information can you learn about your application from this page?
+* How else could we implement statistics logging without making a request from the front end?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
